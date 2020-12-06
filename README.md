@@ -1,27 +1,43 @@
-# AdderFront
+# Adder front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This is the front application for the Environment UE.  
+2020 - 2021
 
-## Development server
+The back-end is located at https://github.com/kryffin/adder-back.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to use
 
-## Code scaffolding
+First, clone this repository :
+```shell script
+$ git clone https://github.com/kryffin/adder-front.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then you will need to install the required dependencies :
 
-## Build
+```shell script
+$ cd adder-front
+$ yarn install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You can now run the application :
 
-## Running unit tests
+```shell script
+$ ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The front application will run on http://localhost:4200/
 
-## Running end-to-end tests
+To stop the application, simply use *Ctrl-C* or *Cmd-C*.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Once you're finished, you can delete the repository from your computer with the following command :
 
-## Further help
+```shell script
+$ cd ..
+$ rm -rf adder-front
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Notes
+
+I used floats with only two decimals to ease the pain of complex divisions.
+
+There is no test for dividing by zero since the front-end disables the *Diviser* button when trying to divide by zero.
