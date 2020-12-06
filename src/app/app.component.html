@@ -1,7 +1,7 @@
 <label>
-  Base : <span id="current">{{cur.toFixed(1)}}</span><br/>
-  Chiffre utile : <input id="input" type="number"  #titleInput><br/>
-  Réponse : <span id="reponse">{{rep.toFixed(1)}}</span>
+  Base : <span id="current">{{fix(cur)}}</span><br/>
+  Chiffre utile : <input id="input" type="number" (input)="changeTemp(titleInput.value)"  #titleInput><br/>
+  Réponse : <span id="reponse">{{fix(rep)}}</span>
 </label>
 <br/>
 <br/>
@@ -15,4 +15,4 @@ Opérations :
 <br/>
 <button id="time" (click)="time(titleInput.value)">Multiplier</button> (base * chiffre utile)
 <br/>
-<button id="div" (click)="div(titleInput.value)">Diviser</button> (base / chiffre utile)
+<button id="div" (click)="div(titleInput.value)" [disabled]="!checkTempNonZero()">Diviser</button> (base / chiffre utile)
